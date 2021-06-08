@@ -2,7 +2,7 @@ import java.util.*;
 
 public class main {
     public static void main(String[] args){
-       int choice1 , choice2,choice3 ,numOfSlots ;
+       int choice1 ,choice2 ,choice3 ,numOfSlots, ChosenTeam ;
        String answer , answer2;
        long playerPhone , ownerPhone;
        int playerID , ownerID;
@@ -21,7 +21,7 @@ public class main {
        switch(choice1){
            case 1:
                System.out.println("1-player");
-               System.out.println("2-play ground owner");
+               System.out.println("2-playground owner");
                choice2 = input.nextInt();
                switch(choice2){
                    case 1:
@@ -43,17 +43,30 @@ public class main {
                        System.out.println("ID: ");
                        playerID=input.nextInt();
                        player.setId(playerID);
-                       System.out.println("Do you want to book a play ground?(yes,no) ");
+                       System.out.println("1-Do you want to book a play ground?(yes,no) ");
+                       System.out.println("2-Do you want to join a team?(yes,no) ");
                        answer = input.next();
-                       if(answer.equals("yes")){
-                            System.out.println("Enter number of time slots:");
-                            numOfSlots = input.nextInt();
-                            System.out.println("Total price is: "+playground.bookAplayGround(numOfSlots));
+                       switch(answer){
+                               case1:
+                               if(answer.equals("yes")){
+                               System.out.println("Enter number of time slots:");
+                               numOfSlots = input.nextInt();
+                               System.out.println("Total price is: "+playground.bookAplayGround(numOfSlots));
+                             }
+                               else if(answer.equals("no")) {
+                               return;       
+                            }
+                         break;
+                               case2:
+                               if(answer.equals("yes")){
+                               System.out.println("Choose the team you want to join to");
+                               ChosenTeam = input.nextInt();
+                               System.out.println("Your Team is: "+playground.ChooseATeam(ChosenTeam));
+                             }
+                               else if(answer.equals("no")) {
+                               return;       
+                            }
                        }
-                       else if(answer.equals("no")) {
-                             return;       
-                       }
-                       break;
                    case 2:
                        System.out.println("Name: ");
                        ownerName = input.next();
