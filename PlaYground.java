@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 
@@ -5,7 +6,7 @@ public class PlaYground {
     private String location;
     private String name;
     private double area;
-    private float pricePerHoure;
+    private float pricePerHour;
     private double cancellationPeriod;
     private int start;
     private int end;
@@ -13,11 +14,11 @@ public class PlaYground {
 
     public PlaYground() {
     }
-    public PlaYground(String location, String name, double area, float pricePerHoure, double cancellationPeriod, int start, int end, ArrayList<PlaYground> grounds) {
+    public PlaYground(String location, String name, double area, float pricePerHour, double cancellationPeriod, int start, int end, ArrayList<PlaYground> grounds) {
         this.location = location;
         this.name = name;
         this.area = area;
-        this.pricePerHoure = pricePerHoure;
+        this.pricePerHour = pricePerHour;
         this.cancellationPeriod = cancellationPeriod;
         this.start = start;
         this.end = end;
@@ -37,8 +38,8 @@ public class PlaYground {
         this.area = area;
     }
 
-    public void setPricePerHoure(float pricePerHoure) {
-        this.pricePerHoure = pricePerHoure;
+    public void setPricePerHour(float pricePerHour) {
+        this.pricePerHour = pricePerHour;
     }
 
     public void setCancellationPeriod(double cancellationPeriod) {
@@ -71,7 +72,7 @@ public class PlaYground {
     }
 
     public float getPricePerHoure() {
-        return pricePerHoure;
+        return pricePerHour;
     }
 
     public double getCancellationPeriod() {
@@ -89,6 +90,15 @@ public class PlaYground {
     public ArrayList<PlaYground> getGround() {
         return grounds;
     }
-    
-    
+    public void displayPlayground()
+    {
+        System.out.println("Name"+ getName());
+        System.out.println("price per hour"+ getPricePerHoure());
+        System.out.println("cancellation period"+getCancellationPeriod());
+        System.out.println("Area:" + getArea());
+    }
+    public float bookAplayGround(int slots)
+    {
+        return slots*pricePerHour;
+    }
 }

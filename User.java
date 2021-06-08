@@ -11,6 +11,8 @@ public class User {
     private String password;
     private ArrayList<User> users;
 
+    public User() {
+    }
     public User(String name, int id, String email, long phone, String location, String password, ArrayList<User> users) {
         this.name = name;
         this.id = id;
@@ -76,23 +78,5 @@ public class User {
     public ArrayList<User> getUsers() {
         return users;
     }
-    public void checkEmailForSignUp(String Email)
-    {
-        if(Email == email){
-            System.out.println("success");
-        }else{
-            System.out.println("access denied");
-        }
-    }
-    public void checkPass(String Password){
-        if(Password == password){
-            System.out.println("success");
-        }else{
-            System.out.println("wrong password");
-        }
-    }
-    public void checkEmailForLogIn(String Email){
-        
-    }
-    
+       
 }
