@@ -1,5 +1,5 @@
- # homwork 4
- ## Introduction 
+# homwork 4
+## Introduction 
 This document describes the initial requirements of the project developed during CS251: Introduction to Software Engineering, Winter 2021 at Faculty of Computers and Artificial Intelligence. This project will span assignments 3, 4 and 5. This is the initial description received from the client. It might not be complete or unclear. Your job is to ensure full understanding of what the client wants. You can use questions, interviews, or other means to collect information from the client.
 
 ## Project Description 
